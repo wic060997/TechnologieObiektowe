@@ -1,0 +1,33 @@
+Projekt - Technologie Obiektowe
+
+Skład grupy:
+  Mateusz Bonar mateusz211@vp.pl
+  Damian Kozakowski damian.kozakowski@outlook.com
+  Wiktor Wójcik wic060997@gmail.com
+Temat projektu: 34. Porównanie wybranych frameworków - porównamy między sobą rożne frameworki: React.js, Angular, Vue.js , porównamy wydajności tych technologii wraz z wykorzystaniem aplikacji z częścią back-end projektu 
+Spis technologii: JAVA,React.js, Angular, Vue.js
+Realistyczny harmonogram pracy wraz z listą funkcjonalności, które zostaną zaimplementowane:
+	Etap 1: Przygotowanie repozytorium rozdzielenie pracy
+	Etap 2: Przygotowanie częsci back-end
+	Etap 3: Przygotowanie częsci front-end w React.js
+	Etap 4: Przygotowanie czesci front-end w Angular
+	Etap 5: Przygotowanie czesci front-end Vue.js
+	Etap 6: Przeprowadzenie testow
+	Etap 7: Przeprowadzenie testow i opracowanie wyników wraz z wnioskami
+	Etap 8: Oddanie pracy
+Lista funkcjonalności: 
+	Benchmarki przy zarządzaniu okreslonej duzej ilosci komponentow 
+	Pomiar korelacji pomiedzy pomiedzy poszczegolnymi framweorkami oraz benchmarki na podstawie danych
+	Rendering Script Times
+	Re-rendering Script Times on Changes
+	
+Podział prac w zespole:
+	React.js -> Mateusz Bonar
+	Angular -> Wiktor Wójcik
+	Vue.js -> Mateusz Bonar/Wiktor Wójcik/Damian Kozakowski
+	Przeprowadzenie testów ->  Mateusz Bonar/Wiktor Wójcik/Damian Kozakowski
+	Przygotowanie czesci back-end -> Damian Kozakowski
+Tematy prac inżynierskiej:
+	Mateusz Bonar "Projekt i implementacja aplikacji wspomagającej osoby przebywające na specjalistycznej diecie"
+        Wiktor Wójcik "Opracowanie kompleksowego systemu do obsługi hurtowni części samochodowych w postaci aplikacji wielowarstwowej"
+	Damian Kozakowski "Projekt i implementacja zintegrowanego systemu wzajemnych rozliczeń użytkowników wspólnych przedsięwzięć"
