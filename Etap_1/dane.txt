@@ -20,6 +20,13 @@ Lista funkcjonalności:
 	Pomiar korelacji pomiedzy pomiedzy poszczegolnymi framweorkami oraz benchmarki na podstawie danych
 	Rendering Script Times
 	Re-rendering Script Times on Changes
+Opis przeprowadzanych testów: 
+1.  Pomiar zajętości czasowej, zużycia pamięci  wstawienia (np. 10 000) elementów do DOM 
+2.  Pomiar zajętości czasowej, wyrenderowania elementów na stronie
+3.  Pomiar zajętości czasowej, zużycia pamięci z załadowania i wyrenderowania strony
+4.  Pomiar zajętości czasowej, przy sortowaniu/filtrowaniu danych w tabeli
+5.  Pomiar zajętości czasowej i pamięciowej wygenerowania, wysłania, odebrania i przetworzenia zapytania REST do serwera danych 
+
 Tematy prac inżynierskiej:
 	Mateusz Bonar "Projekt i implementacja aplikacji wspomagającej osoby przebywające na specjalistycznej diecie"
         Wiktor Wójcik "Opracowanie kompleksowego systemu do obsługi hurtowni części samochodowych w postaci aplikacji wielowarstwowej"
