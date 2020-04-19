@@ -22,7 +22,7 @@ class HomePage extends Component {
   state = {};
   render() {
     const divsRender = divs.map((item) => (
-      <Link to={item.link}>
+      <Link to={item.link} key={item.id}>
         <div className={item.class} key={item.id} id={item.id_div}>
           <p>{item.name}</p>
         </div>
