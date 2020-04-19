@@ -11,7 +11,7 @@ const divs = [
   {
     id: 2,
     class: 'div-table',
-    name: 'Tabela',
+    name: 'Dane z REST API',
     link: '/dynamic-table',
     id_div: 'wrap-container-table-id-2',
   },

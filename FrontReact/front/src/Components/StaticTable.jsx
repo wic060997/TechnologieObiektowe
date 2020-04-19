@@ -11,10 +11,7 @@ class StaticTable extends Component {
     return (
       <div className='static-table-div'>
         <h1>Static table</h1>
-        <BootstrapTable
-          data={this.state.dataTable}
-          options={{ noDataText: 'Wprowadz tekst aby wyszukac' }}
-        >
+        <BootstrapTable data={this.state.dataTable}>
           <TableHeaderColumn dataField='id' isKey hidden>
             Product ID
           </TableHeaderColumn>
@@ -26,8 +23,6 @@ class StaticTable extends Component {
             ip_address
           </TableHeaderColumn>
         </BootstrapTable>
-
-        <table></table>
       </div>
     );
   }
