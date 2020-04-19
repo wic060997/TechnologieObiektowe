@@ -6,14 +6,10 @@ class DynamicTable extends Component {
   state = {
     data: '',
   };
-
+  
   componentDidMount() {
-    const {
-      match: { params },
-    } = this.props;
-    console.log(params.amount);
     axios
-      .get(`http://localhost:8080/${params.amount}`)
+      .get(`http://localhost:8080/${this.props.amount}`)
       .then((json) => {
         this.setState({
           data: json.data,
@@ -25,9 +21,9 @@ class DynamicTable extends Component {
   }
 
   render() {
-    console.log('Jestem załadowany!!! DynamicTable');
+    console.log(this.props.amount)
     return (
-      <div>
+      <div className='static-table-div'>
         <BootstrapTable data={this.state.dataTable}>
           <TableHeaderColumn dataField='id' isKey hidden>
             Product ID

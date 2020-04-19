@@ -12,12 +12,27 @@ class App extends Component {
     return (
       <Router>
         <Switch>
-        <Route exact path={paths.home} component={HomePage} />
-        <Route path={paths.homeText} component={Text} />
-        <Route path={paths.homeTable} component={Table} />
-        <Route path={paths.staticTable} component={StaticTable} />
-        <Route path={paths.dynamicTable} component={Rest} />
-        <Route path={'/dynamic-table/:amount'} component={DynamicTable} />
+          <Route exact path={paths.home} component={HomePage} />
+          <Route path={paths.homeText} component={Text} />
+          <Route path={paths.homeTable} component={Table} />
+          <Route path={paths.staticTable} component={StaticTable} />
+          <Route exact path={paths.dynamicTable} component={Rest} />
+          <Route
+            exact path={paths.apiRestSimple}
+            render={(props) => <DynamicTable {...props} amount={'simple'} />}
+          />
+          <Route
+            exact path={paths.apiRestData1k}
+            render={(props) => <DynamicTable {...props} amount={'1k'} />}
+          />
+          <Route
+           exact path={paths.apiRestData10k}
+            render={(props) => <DynamicTable {...props} amount={'10k'} />}
+          />
+          <Route
+            exact path={paths.apiRestData1m}
+            render={(props) => <DynamicTable {...props} amount={'1m'} />}
+          />
         </Switch>
       </Router>
     );

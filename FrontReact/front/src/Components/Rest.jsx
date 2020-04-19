@@ -43,7 +43,7 @@ class Rest extends Component {
     console.log("Jestem zaladowany!!! Rest")
 
     const divsRender = divs.map((item) => (
-      <Link to={item.link} key={item.id} params={{ amount: item.param }}>
+      <Link to={item.link} key={item.id} params={{ testvalue: "simple" }}>
         <div className={item.class} id={item.id_div}>
           <p>{item.name}</p>
         </div>
