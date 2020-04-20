@@ -1,0 +1,14 @@
+=========================================
+========== StatisticsFileTools ==========
+=========================================
+
+Uwagi
+ * przed uruchomieniem, jeœli istnieje nie mo¿e byæ otwarty w ¿adnym innym programie plik result.csv
+ * plik hisotryResults.dk jest g³ównym plikiem historii, po jego usuniêciu raporty bêd¹ generowaæ siê od zera
+ 
+Uruchomienie
+1. Uruchomienie z zapisaniem raportu do historii
+java -jar StatisticsFileTools_1.1.jar <œcie¿ka do katalogu który ma byæ zbadany>
+
+2. Uruchomienie bez zapisu raportu do historii
+java -jar StatisticsFileTools_1.1.jar <œcie¿ka do katalogu który ma byæ zbadany> 1
