@@ -6,40 +6,21 @@ import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.Set;
-import java.util.TreeSet;
 
 public class TestsExecutor {
 
     private Set<Class<? extends PageFactory>> classes;
     private Set<Configuration.BROWSER> browsers;
-    private Set<PageFactory> pageFactories = new TreeSet<>();
     private ReportGenerator reportGenerator;
 
     public TestsExecutor(Set<Class<? extends PageFactory>> classes, Set<Configuration.BROWSER> browsers, ReportGenerator reportGenerator) {
         this.classes = classes;
-//        Constructor<PageFactory> pageFactoryConstructor;
-//        for (Class<? extends PageFactory> c : classes) {
-//            try {
-//                pageFactoryConstructor = (Constructor<PageFactory>) c.getConstructor();
-//                pageFactories.add(pageFactoryConstructor.newInstance());
-//            } catch (NoSuchMethodException e) {
-//                e.printStackTrace();
-//            } catch (IllegalAccessException | InstantiationException | InvocationTargetException e) {
-//                e.printStackTrace();
-//            }
-//        }
         this.browsers = browsers;
         this.reportGenerator = reportGenerator;
     }
 
     public void registerClass(Class<? extends PageFactory> clasz) {
-        try {
-            Constructor<PageFactory> pageFactoryConstructor = (Constructor<PageFactory>) clasz.getConstructor();
-            pageFactories.add(pageFactoryConstructor.newInstance());
-        } catch (NoSuchMethodException | InvocationTargetException | IllegalAccessException | InstantiationException e) {
-            e.printStackTrace();
-        }
-
+        classes.add(clasz);
     }
 
     public void executeTests() {
@@ -47,11 +28,13 @@ public class TestsExecutor {
         Class clasz;
         WebDriver driver;
         Constructor<WebDriver> webDriverConstructor;
+        PageFactory pageFactory = null;
+        Constructor<PageFactory> pageFactoryConstructor;
         Method driverMethod;
         Method setupMethod;
 
-        System.out.println("Lista technologi do testów: " + pageFactories);
-        for (PageFactory pageFactory : pageFactories) {
+        System.out.println("Lista technologi do testów: " + classes);
+        for (Class<? extends PageFactory> pageFactoryClass : classes) {
             for (Configuration.BROWSER browser : browsers) {
                 // create WebDriver instance
                 // execute simple test
@@ -65,6 +48,14 @@ public class TestsExecutor {
                     clasz = Class.forName(browser.webDriverClass);
                     webDriverConstructor = clasz.getConstructor();
                     driver = webDriverConstructor.newInstance();
+
+                    try {
+                        pageFactoryConstructor = (Constructor<PageFactory>) pageFactoryClass.getConstructor(WebDriver.class);
+                        pageFactory = pageFactoryConstructor.newInstance(driver);
+                    } catch (NoSuchMethodException | IllegalAccessException | InstantiationException | InvocationTargetException e) {
+                        e.printStackTrace();
+                    }
+
                 } catch (ClassNotFoundException | NoSuchMethodException | IllegalAccessException | InvocationTargetException | InstantiationException e ) {
                     e.printStackTrace();
                     break;
@@ -73,14 +64,13 @@ public class TestsExecutor {
                 for (int i = 0; i < Configuration.AMOUNT_OF_TESTS; i++) {
                     executeTestSimpleTech(pageFactory, browser);
                 }
-
+                driver.close();
             }
         }
-
     }
 
     private void executeTestSimpleTech(PageFactory pageFactory, Configuration.BROWSER browser) {
-        reportGenerator.addStaticTableTestResult(pageFactory.getTechnology(), browser, pageFactory.performDynamicDataTest());
+        reportGenerator.addStaticTableTestResult(pageFactory.getTechnology(), browser, pageFactory.performStaticTableTest());
     }
 
 }

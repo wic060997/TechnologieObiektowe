@@ -15,10 +15,11 @@ public final class Configuration {
     }
 
     public enum BROWSER {
-        CHROME("Google Chrome","chromedriver", "org.openqa.selenium.chrome.ChromeDriver");
-//        FIREFOX,
-//        IE,
-//        EDGE;
+        CHROME("Google Chrome","chromedriver", "org.openqa.selenium.chrome.ChromeDriver"),
+        FIREFOX("Mozilla Firefox", "firefoxdriver", "org.openqa.selenium.firefox.FirefoxDriver"),
+        IE("Internt Explorer", "iedriver", "org.openqa.selenium.ie.InternetExplorerDriver"),
+        OPERA("Opera", "operadriver", "org.openqa.selenium.opera.OperaDriver"),
+        EDGE("Edge", "edgedriver", "org.openqa.selenium.edge.EdgeDriver");
 
         public final String label;
         public final String webDriverManagerMethod;
