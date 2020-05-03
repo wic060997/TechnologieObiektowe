@@ -7,22 +7,33 @@ class StaticTable extends Component {
   state = {
     dataTable: data,
   };
+
   render() {
+    console.log('Start: ' + Date.now());
+    const elementRender = data.map((item, i) => (
+      <tr key={item.id}>
+        <td>{item.id}</td>
+        <td>{item.Imie}</td>
+        <td>{item.Nazwisko}</td>
+        <td>{item.email}</td>
+        <td>{item.gender}</td>
+        <td>{item.ip_address}</td>
+      </tr>
+    ));
     return (
       <div className='static-table-div'>
-        <h1>Static table</h1>
-        <BootstrapTable data={this.state.dataTable}>
-          <TableHeaderColumn dataField='id' isKey hidden>
-            Product ID
-          </TableHeaderColumn>
-          <TableHeaderColumn dataField='Imie'>Imie</TableHeaderColumn>
-          <TableHeaderColumn dataField='Nazwisko'>Nazwisko</TableHeaderColumn>
-          <TableHeaderColumn dataField='email'>email</TableHeaderColumn>
-          <TableHeaderColumn dataField='gender'>Płeć</TableHeaderColumn>
-          <TableHeaderColumn dataField='ip_address'>
-            ip_address
-          </TableHeaderColumn>
-        </BootstrapTable>
+        <table>
+          <thead>
+            <th>Id</th>
+            <th>Imie</th>
+            <th>Nazwisko</th>
+            <th>email</th>
+            <th>gender</th>
+            <th>ip_address</th>
+          </thead>
+          <body>{elementRender}</body>
+        </table>
+        {console.log('Finish: ' + Date.now())}
       </div>
     );
   }

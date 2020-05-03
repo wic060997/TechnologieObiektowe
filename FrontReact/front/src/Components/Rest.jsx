@@ -40,8 +40,6 @@ class Rest extends Component {
   state = {};
   render() {
 
-    console.log("Jestem zaladowany!!! Rest")
-
     const divsRender = divs.map((item) => (
       <Link to={item.link} key={item.id} params={{ testvalue: "simple" }}>
         <div className={item.class} id={item.id_div}>
@@ -50,7 +48,7 @@ class Rest extends Component {
       </Link>
     ));
     return (
-      <div>
+      <div id='rest-wrap-id'>
         <div className='wrap-container' id='wrap-container-main-table'>
           {divsRender}
         </div>
