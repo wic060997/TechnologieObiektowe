@@ -1,1 +1,25 @@
 <p>dynamic-table works!</p>
+
+<table>
+    <thread>
+        <tr>
+            <th>Id</th>
+            <th>Imie</th>
+            <th>Nazwisko</th>
+            <th>email</th>
+            <th>Gender</th>
+            <th>ip_address</th>
+          </tr>
+    </thread>
+    <tbody>
+        <tr *ngFor="let el of data">
+            <td>{{ el.id }}</td>
+            <td>{{ el.Imie }}</td>
+            <td>{{ el.Nazwisko }}</td>
+            <td>{{ el.email }}</td>
+            <td>{{ el.gender }}</td>
+            <td>{{ el.ip_address }}</td>
+        </tr>
+    </tbody>
+  
+</table>
