@@ -2,14 +2,22 @@ import React, { Component } from 'react';
 import '../App.css';
 
 class DynamicTable extends Component {
-  state = {
-    data: '',
-  };
+  constructor()
+  {
+    console.log('Start: ' + Date.now())
+    super()
+    this.state = {
+      data: '',
+    };
 
-  componentDidMount() {
+  }
+  
+
+  componentDidMount() { 
     fetch(`http://localhost:8080/${this.props.amount}`)
      .then(response => response.text())
       .then(data => this.setState({ data: data }));
+      console.log('Finish: ' + Date.now())
   }
  
 

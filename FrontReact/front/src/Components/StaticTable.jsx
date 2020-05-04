@@ -3,12 +3,19 @@ import '../App.css';
 import data from './data/jsonDataTable.json';
 
 class StaticTable extends Component {
-  state = {
-    dataTable: data,
-  };
+  constructor()
+  {
+    console.log('Start: ' + Date.now());
+    super()
+    this.state = {};
+  }
+
+  componentDidMount(){
+    console.log('Finish: ' + Date.now())
+  }
+ 
 
   render() {
-    console.log('Start: ' + Date.now());
     const elementRender = data.map((item, i) => (
       <tr key={item.id}>
         <td>{item.id}</td>
@@ -32,7 +39,6 @@ class StaticTable extends Component {
           </thead>
           {elementRender}
         </table>
-        {console.log('Finish: ' + Date.now())}
       </div>
     );
   }
