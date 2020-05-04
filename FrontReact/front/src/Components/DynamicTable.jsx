@@ -11,14 +11,16 @@ class DynamicTable extends Component {
     };
 
   }
-  
+  componentDidUpdate(){
+    console.log('Finish: ' + Date.now())
+  }
 
   componentDidMount() { 
     fetch(`http://localhost:8080/${this.props.amount}`)
      .then(response => response.text())
       .then(data => this.setState({ data: data }));
-      console.log('Finish: ' + Date.now())
   }
+
  
 
   render() {
