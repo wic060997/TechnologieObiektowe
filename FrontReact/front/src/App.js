@@ -23,15 +23,15 @@ class App extends Component {
           />
           <Route
             exact path={paths.apiRestData1k}
-            render={(props) => <DynamicTable {...props} amount={'1k'} />}
+            render={(props) => <DynamicTable {...props} amount={'data1k'} />}
           />
           <Route
            exact path={paths.apiRestData10k}
-            render={(props) => <DynamicTable {...props} amount={'10k'} />}
+            render={(props) => <DynamicTable {...props} amount={'data10k'} />}
           />
           <Route
             exact path={paths.apiRestData1m}
-            render={(props) => <DynamicTable {...props} amount={'1m'} />}
+            render={(props) => <DynamicTable {...props} amount={'data1m'} />}
           />
         </Switch>
       </Router>

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { BootstrapTable, TableHeaderColumn } from 'react-bootstrap-table';
 import '../App.css';
 import data from './data/jsonDataTable.json';
 
@@ -31,7 +30,7 @@ class StaticTable extends Component {
             <th>gender</th>
             <th>ip_address</th>
           </thead>
-          <body>{elementRender}</body>
+          {elementRender}
         </table>
         {console.log('Finish: ' + Date.now())}
       </div>
