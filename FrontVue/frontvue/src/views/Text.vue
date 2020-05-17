@@ -8,7 +8,7 @@
 <script>
 export default {
   mounted() {
-    console.log(`Stop:${Date.now()}`);
+    console.warn(`Stop:${Date.now()}`);
   },
   name: 'Text',
   textSample: 'Abcd efgh ijkl',

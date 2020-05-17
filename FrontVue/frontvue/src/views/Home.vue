@@ -15,7 +15,7 @@ export default {
   name: 'Home',
   methods: {
     startTime() {
-      console.log(`Start:${Date.now()}`);
+      console.warn(`Start:${Date.now()}`);
     },
   },
 };

@@ -18,7 +18,7 @@ public class Main {
         System.out.println(technologyClassExtractor.getInstalledTechnologyClasses());
         Set<Configuration.BROWSER> browsers = new TreeSet<>();
         browsers.add(Configuration.BROWSER.CHROME);
-        browsers.add(Configuration.BROWSER.FIREFOX);
+//        browsers.add(Configuration.BROWSER.FIREFOX);
 
         TestsExecutor testsExecutor = new TestsExecutor(technologyClassExtractor.getInstalledTechnologyClasses(), browsers, reportGenerator);
         testsExecutor.executeTests();
