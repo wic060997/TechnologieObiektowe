@@ -1,6 +1,10 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
+import Text from '../views/Text.vue';
+import Table from '../views/Table.vue';
+import StaticTable from '../views/StaticTable.vue';
+import DynamicTable from '../views/DynamicTable.vue';
 
 Vue.use(VueRouter);
 
@@ -11,14 +15,54 @@ const routes = [
     component: Home,
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component() {
-      return import(/* webpackChunkName: "about" */ '../views/About.vue');
-    },
+    path: '/text',
+    name: 'Text',
+    component: Text,
+  },
+  {
+    path: '/table',
+    name: 'Table',
+    component: Table,
+  },
+  {
+    path: '/static-table',
+    name: 'StaticTable',
+    component: StaticTable,
+  },
+  {
+    path: '/dynamic-table',
+    name: 'DynamicTable',
+    component: DynamicTable,
+  },
+  {
+    path: '/dynamic-table/simple',
+    name: 'DynamicTableSimple',
+    component: DynamicTableSimple,
+  },
+  {
+    path: '/dynamic-table/data1k',
+    name: 'DynamicTableData1k',
+    component: DynamicTableData1k,
+  },
+  {
+    path: '/dynamic-table/data10k',
+    name: 'DynamicTableData10k',
+    component: DynamicTableData10k,
+  },
+  {
+    path: '/dynamic-table/data1m',
+    name: 'DynamicTableData1m',
+    component: DynamicTableData1m,
+  },
+  // {
+  //   path: '/about',
+  //   name: 'About',
+  //   // route level code-splitting
+  //   // this generates a separate chunk (about.[hash].js) for this route
+  //   // which is lazy-loaded when the route is visited.
+  //   component() {
+  //     return import(/* webpackChunkName: "about" */ '../views/About.vue');
+  //   },
   },
 ];
 
