@@ -1,12 +1,9 @@
 .selector {
     width: fit-content;
     margin: 100px auto;
-
-    
 }
 
 .selector a {
-    width: 400px;
     margin-left: 30px;
     margin-right: 30px;
     padding: 30px 30px 30px 30px;
@@ -22,5 +19,5 @@
 }
 
 .selector a:hover {
-    background-color: gray;
+    background-color: teal;
 }
