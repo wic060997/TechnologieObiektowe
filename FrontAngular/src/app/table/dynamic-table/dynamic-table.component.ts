@@ -8,9 +8,9 @@ import { DataModel } from 'src/app/shared/models/data.model';
   templateUrl: './dynamic-table.component.html',
   styleUrls: ['./dynamic-table.component.scss'],
 })
-export class DynamicTableComponent implements OnInit,AfterViewInit {
+export class DynamicTableComponent  {
   private jsonURL = 'assets/jsonDataTable.json';
-  protected data: any = [];
+  public data: any = [];
 
   constructor(private router: Router, private http: HttpClient) {}
   ngAfterViewInit(): void {
@@ -21,7 +21,6 @@ export class DynamicTableComponent implements OnInit,AfterViewInit {
     console.log(new Date().getTime());
     this.http.get(this.jsonURL).subscribe(result => {
       this.data = result;
-      console.log(result);
     });
   }
 }

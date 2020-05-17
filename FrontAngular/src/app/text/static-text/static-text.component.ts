@@ -15,13 +15,14 @@ export class StaticTextComponent implements OnInit,AfterViewInit {
 
   constructor(private router: Router, private http: HttpClient) {}
   ngAfterViewInit(): void {
-    console.log(new Date().getTime());
+    console.log('END TIME: ' +new Date().getTime());
   }
 
   ngOnInit(): void {
-    console.log(new Date().getTime());
+    console.log('START TIME: ' +new Date().getTime());
     this.http.get(this.jsonURL).subscribe((data) => {
       this.staticText = data[0].Text;
+      console.log('END TIME: ' +new Date().getTime());
     });
   }
 
