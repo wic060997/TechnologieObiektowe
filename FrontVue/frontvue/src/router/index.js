@@ -5,6 +5,10 @@ import Text from '../views/Text.vue';
 import Table from '../views/Table.vue';
 import StaticTable from '../views/StaticTable.vue';
 import DynamicTable from '../views/DynamicTable.vue';
+import DynamicTableSimple from '../views/DynamicTableSimple.vue';
+import DynamicTableData1k from '../views/DynamicTableData1k.vue';
+import DynamicTableData10k from '../views/DynamicTableData10k.vue';
+import DynamicTableData1m from '../views/DynamicTableData1m.vue';
 
 Vue.use(VueRouter);
 
@@ -63,7 +67,7 @@ const routes = [
   //   component() {
   //     return import(/* webpackChunkName: "about" */ '../views/About.vue');
   //   },
-  },
+  // },
 ];
 
 const router = new VueRouter({
