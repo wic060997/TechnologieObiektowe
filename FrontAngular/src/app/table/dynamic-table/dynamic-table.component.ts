@@ -14,11 +14,11 @@ export class DynamicTableComponent  {
 
   constructor(private router: Router, private http: HttpClient) {}
   ngAfterViewInit(): void {
-    console.log(new Date().getTime());
+    console.warn(new Date().getTime());
   }
 
   ngOnInit(): void {
-    console.log(new Date().getTime());
+    console.warn(new Date().getTime());
     this.http.get(this.jsonURL).subscribe(result => {
       this.data = result;
     });

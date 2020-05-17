@@ -15,14 +15,14 @@ export class MilionElementComponent implements OnInit,AfterViewInit {
   constructor(private router: Router, private http: HttpClient,private service: DataService) {}
 
   ngAfterViewInit(): void {
-    console.log('END TIME: ' +new Date().getTime());
+    console.warn('END TIME: ' +new Date().getTime());
   }
 
   ngOnInit(): void {
-    console.log('START TIME: ' +new Date().getTime());
+    console.warn('START TIME: ' +new Date().getTime());
     this.service.getOneMilionElement().subscribe(response => {
       this.data = response;
-      console.log('START TIME: ' +new Date().getTime());
+      //console.log('START TIME: ' +new Date().getTime());
     })
   }
 }

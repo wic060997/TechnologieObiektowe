@@ -13,13 +13,13 @@ export class StaticTableComponent implements OnInit,AfterViewInit {
 
   constructor(private router: Router, private http: HttpClient) {}
   ngAfterViewInit(): void {
-    console.log('END TIME: ' +new Date().getTime());
+    console.warn('END TIME: ' +new Date().getTime());
   }
 
   ngOnInit(): void {
     this.http.get(this.jsonURL).subscribe(result => {
       this.data = result;
-      console.log('START TIME: ' +new Date().getTime());
+      console.warn('START TIME: ' +new Date().getTime());
     });
   }
 }
