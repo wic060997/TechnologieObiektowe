@@ -8,6 +8,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import pl.kozakowski.seleniumtestingautomat.Configuration;
 import pl.kozakowski.seleniumtestingautomat.PageFactory;
 
+import java.util.concurrent.TimeUnit;
+
 public class React implements PageFactory {
 
     private static final String BASE_URL = "http://localhost:3000";
@@ -24,7 +26,7 @@ public class React implements PageFactory {
 
     public React(WebDriver webDriver) {
         this.webDriver = webDriver;
-        wait = new WebDriverWait(this.webDriver, 30);
+        wait = (WebDriverWait) new WebDriverWait(this.webDriver, 30).pollingEvery(10, TimeUnit.MILLISECONDS);
     }
 
     @Override

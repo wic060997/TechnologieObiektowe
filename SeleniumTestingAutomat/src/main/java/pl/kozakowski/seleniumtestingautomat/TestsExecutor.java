@@ -70,7 +70,7 @@ public class TestsExecutor {
     }
 
     private void executeTestSimpleTech(PageFactory pageFactory, Configuration.BROWSER browser) {
-        reportGenerator.addStaticTableTestResult(pageFactory.getTechnology(), browser, pageFactory.performStaticTableTest());
+        reportGenerator.addStaticTableTestResult(pageFactory.getTechnology(), browser, Configuration.TEST_TYPE.STATIC_TABLE, pageFactory.performStaticTableTest());
     }
 
 }
