@@ -15,6 +15,6 @@ export class TableComponent implements OnInit {
 
   goToTableStatic(){this.router.navigate(["staticTable"]);}
 
-  goToTableDynamic(){this.router.navigate(["dynamicTable"]);}
+  goToTableDynamic(){this.router.navigate(["chooseTable"]);}
 
 }

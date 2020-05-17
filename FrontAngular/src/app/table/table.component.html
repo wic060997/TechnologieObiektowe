@@ -1,13 +1,11 @@
 <div>
-    <div>
-        <h2>Wybierz sposób wyświetlania tabeli:</h2>
-    </div>
-    <div>
-        <button (click)="goToTableStatic()">
-            Tekst statyczny
+    <p>Wybierz sposób wyświetlania tabeli:</p>
+    <div class="App">
+        <button className='wrap-container' (click)="goToTableStatic()">
+            Dane w tabeli statyczne
         </button>
-        <button (click)="goToTableDynamic()">
-            Tekst dynamiczny
+        <button className='wrap-container' (click)="goToTableDynamic()">
+            Dane z REST API
         </button>
     </div>
 </div>

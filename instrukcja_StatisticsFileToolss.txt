@@ -3,12 +3,13 @@
 =========================================
 
 Uwagi
- * przed uruchomieniem, jeœli istnieje nie mo¿e byæ otwarty w ¿adnym innym programie plik result.csv
- * plik hisotryResults.dk jest g³ównym plikiem historii, po jego usuniêciu raporty bêd¹ generowaæ siê od zera
+ * przed uruchomieniem, jeÅ›li istnieje nie moÅ¼e byÄ‡ otwarty w Å¼adnym innym programie plik result.csv
+ * plik hisotryResults.dk jest gÅ‚Ã³wnym plikiem historii, po jego usuniÄ™ciu raporty bÄ™dÄ… generowaÄ‡ siÄ™ od zera
+ * naleÅ¼y uruchamiaÄ‡ wyÅ‚Ä…cznie z uÅ¼yciem CMD lub PowerShella.
  
 Uruchomienie
 1. Uruchomienie z zapisaniem raportu do historii
-java -jar StatisticsFileTools_1.1.jar <œcie¿ka do katalogu który ma byæ zbadany>
+java -jar StatisticsFileTools_1.3.jar <Å›cieÅ¼ka do katalogu ktÃ³ry ma byÄ‡ zbadany>
 
 2. Uruchomienie bez zapisu raportu do historii
-java -jar StatisticsFileTools_1.1.jar <œcie¿ka do katalogu który ma byæ zbadany> 1
+java -jar StatisticsFileTools_1.3.jar <Å›cieÅ¼ka do katalogu ktÃ³ry ma byÄ‡ zbadany> 1

@@ -50,7 +50,7 @@ public class React implements PageFactory {
         WebElement staticTableBtn = webDriver.findElement(By.xpath(STATIC_TABLE_ENTRY_BTN_XPATH));
         staticTableBtn.click();
         startTime = System.currentTimeMillis();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"root\"]/div/div/div[1]/div[2]/table/tbody/tr[3000]/td[6]")));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"root\"]/div/table/tr[3000]/td[4]")));
 
         stopTime = System.currentTimeMillis();
 

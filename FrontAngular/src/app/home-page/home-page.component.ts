@@ -18,7 +18,7 @@ export class HomePageComponent implements OnInit {
   }
 
   goToTextChoose(){
-    this.router.navigate(["textChoose"]);
+    this.router.navigate(["staticText"]);
   }
 
   goToTableChoose(){
