@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, AfterContentChecked } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 
@@ -7,13 +7,13 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './static-table.component.html',
   styleUrls: ['./static-table.component.scss']
 })
-export class StaticTableComponent implements OnInit,AfterViewInit {
+export class StaticTableComponent implements OnInit,AfterContentChecked {
   private jsonURL = 'assets/jsonDataTable.json';
   public data: any = [];
 
   constructor(private router: Router, private http: HttpClient) {}
-  ngAfterViewInit(): void {
-    console.warn('END TIME: ' +new Date().getTime());
+  ngAfterContentChecked(): void {
+    console.warn('After content checked: ' + new Date().getTime());
   }
 
   ngOnInit(): void {
