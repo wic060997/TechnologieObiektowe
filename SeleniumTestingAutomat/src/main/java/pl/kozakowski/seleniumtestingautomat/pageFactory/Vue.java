@@ -13,7 +13,7 @@ import pl.kozakowski.seleniumtestingautomat.PageFactory;
 
 import java.util.Date;
 
-public class Vue implements PageFactory {
+public class Vue extends PageFactory {
 
     private static final String BASE_URL = "http://localhost:8081";
 
@@ -27,38 +27,29 @@ public class Vue implements PageFactory {
     private WebDriverWait wait;
 
     public Vue(WebDriver webDriver) {
-        this.webDriver = webDriver;
-        wait = new WebDriverWait(this.webDriver, 30);
+        super(webDriver);
     }
 
-    @Override
+
     public Integer performStaticDataTest() {
         return null;
     }
-
-    @Override
     public Integer performStaticTableTest() {
         webDriver.get(BASE_URL+TABLE_DATA);
         WebElement staticTableBtn = webDriver.findElement(By.xpath(STATIC_TABLE_ENTRY_BTN_XPATH));
         staticTableBtn.click();
         return analyzeLog();
     }
-
-    @Override
     public Integer performDynamicDataTest() {
         return null;
     }
-
-    @Override
     public Integer performDynamicTableTest(Configuration.AMOUNT_DATA amount_data) {
         return null;
     }
 
-    @Override
     public Configuration.TECHNOLOGY getTechnology() {
         return technology;
     }
-
     public Integer analyzeLog() {
         Long startTime = 0L;
         Long stopTime = 0L;
