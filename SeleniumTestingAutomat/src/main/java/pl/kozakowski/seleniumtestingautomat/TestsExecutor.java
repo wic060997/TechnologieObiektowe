@@ -23,7 +23,7 @@ public class TestsExecutor {
         classes.add(clasz);
     }
 
-    public void executeTests() {
+    public void executeTests() throws InterruptedException {
         Object o;
         Class clasz;
         WebDriver driver;
@@ -61,16 +61,29 @@ public class TestsExecutor {
                     break;
                 }
 
-                for (int i = 0; i < Configuration.AMOUNT_OF_TESTS; i++) {
-                    executeTestSimpleTech(pageFactory, browser);
+//                for (int i = 0; i < Configuration.AMOUNT_OF_TESTS; i++) {
+//                    executeTestSimpleTech(pageFactory, browser);
+//                }
+
+                for (Configuration.TEST_TYPE testType: Configuration.TEST_TYPE.values()) {
+                    for (int i = 0; i < Configuration.AMOUNT_OF_TESTS ; i++) {
+                        switch (testType) {
+                            case STATIC_DATA: reportGenerator.addTestResult(testType, pageFactory.getTechnology(), browser, pageFactory.performStaticDataTest()); Thread.sleep(100); break;
+                            case STATIC_TABLE: reportGenerator.addTestResult(testType, pageFactory.getTechnology(), browser, pageFactory.performStaticTableTest()); Thread.sleep(100); break;
+                            case DYNAMIC_DATA: break;
+                            case DYNAMIC_DATE: break;
+                        }
+                    }
                 }
                 driver.close();
             }
         }
     }
 
-    private void executeTestSimpleTech(PageFactory pageFactory, Configuration.BROWSER browser) {
-        reportGenerator.addStaticTableTestResult(pageFactory.getTechnology(), browser, Configuration.TEST_TYPE.STATIC_TABLE, pageFactory.performStaticTableTest());
-    }
+//    private void executeTestSimpleTech(PageFactory pageFactory, Configuration.BROWSER browser) {
+////        reportGenerator.addTestResult(pageFactory.getTechnology(), browser, Configuration.TEST_TYPE.STATIC_TABLE, pageFactory.performStaticTableTest());
+//        reportGenerator.addTestResult(Configuration.TEST_TYPE.STATIC_TABLE, pageFactory.getTechnology(), browser, pageFactory.performStaticTableTest());
+//        reportGenerator.addTestResult(Configuration.TEST_TYPE.STATIC_DATA, pageFactory.getTechnology(), browser, pageFactory.performStaticDataTest());
+//    }
 
 }

@@ -8,16 +8,27 @@ public class ReportGenerator {
 
     private Map<Configuration.TECHNOLOGY, Map<Configuration.BROWSER, Map<Configuration.TEST_TYPE, ArrayList<Integer>>>> report = new TreeMap<>();
 
-    public void addStaticTableTestResult(Configuration.TECHNOLOGY technology, Configuration.BROWSER browser, Configuration.TEST_TYPE testType, Integer result) {
-        if(result != null) {
+    public void addTestResult(Configuration.TEST_TYPE testType, Configuration.TECHNOLOGY technology, Configuration.BROWSER browser, Integer result) {
+        if (result != null) {
             report.putIfAbsent(technology, new TreeMap<>());
             report.get(technology).putIfAbsent(browser, new TreeMap<>());
             report.get(technology).get(browser).putIfAbsent(testType, new ArrayList<>());
             report.get(technology).get(browser).get(testType).add(result);
         } else {
-//            System.out.println("Wynik pusty");
+            System.out.println("Wynik pusty");
         }
     }
+
+//    public void addStaticTableTestResult(Configuration.TECHNOLOGY technology, Configuration.BROWSER browser, Configuration.TEST_TYPE testType, Integer result) {
+//        if(result != null) {
+//            report.putIfAbsent(technology, new TreeMap<>());
+//            report.get(technology).putIfAbsent(browser, new TreeMap<>());
+//            report.get(technology).get(browser).putIfAbsent(testType, new ArrayList<>());
+//            report.get(technology).get(browser).get(testType).add(result);
+//        } else {
+////            System.out.println("Wynik pusty");
+//        }
+//    }
     
     public void printReport() {
         Integer amountOfTests = 0;

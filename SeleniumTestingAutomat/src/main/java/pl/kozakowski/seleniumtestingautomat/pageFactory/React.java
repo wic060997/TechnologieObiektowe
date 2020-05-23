@@ -7,10 +7,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import pl.kozakowski.seleniumtestingautomat.Configuration;
 import pl.kozakowski.seleniumtestingautomat.PageFactory;
-
 import java.util.concurrent.TimeUnit;
 
-public class React implements PageFactory {
+public class React extends PageFactory {
 
     private static final String BASE_URL = "http://localhost:3000";
 
@@ -19,12 +18,8 @@ public class React implements PageFactory {
     private static final String TEXT_DATA = "/text";
     private static final String STATIC_TABLE_ENTRY_BTN_XPATH = "//*[@id=\"wrap-container-main-table\"]/a[1]";
 
-    private  static final Configuration.TECHNOLOGY technology = Configuration.TECHNOLOGY.REACT;
-
-    private WebDriver webDriver;
-    private WebDriverWait wait;
-
     public React(WebDriver webDriver) {
+        technology = Configuration.TECHNOLOGY.REACT;
         this.webDriver = webDriver;
         wait = (WebDriverWait) new WebDriverWait(this.webDriver, 30).pollingEvery(10, TimeUnit.MILLISECONDS);
     }
@@ -65,10 +60,5 @@ public class React implements PageFactory {
     @Override
     public Integer performDynamicTableTest(Configuration.AMOUNT_DATA amount_data) {
         return null;
-    }
-
-    @Override
-    public Configuration.TECHNOLOGY getTechnology() {
-        return technology;
     }
 }
