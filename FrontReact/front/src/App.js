@@ -18,20 +18,60 @@ class App extends Component {
           <Route path={paths.staticTable} component={StaticTable} />
           <Route exact path={paths.dynamicTable} component={Rest} />
           <Route
-            exact path={paths.apiRestSimple}
+            exact
+            path={paths.apiRestSimple}
             render={(props) => <DynamicTable {...props} amount={'simple'} />}
           />
           <Route
-            exact path={paths.apiRestData1k}
+            exact
+            path={paths.apiRestData1k}
             render={(props) => <DynamicTable {...props} amount={'data1k'} />}
           />
           <Route
-           exact path={paths.apiRestData10k}
+            exact
+            path={paths.apiRestData3k}
+            render={(props) => <DynamicTable {...props} amount={'data3k'} />}
+          />
+          <Route
+            exact
+            path={paths.apiRestData5k}
+            render={(props) => <DynamicTable {...props} amount={'data5k'} />}
+          />
+
+          <Route
+            exact
+            path={paths.apiRestData10k}
             render={(props) => <DynamicTable {...props} amount={'data10k'} />}
           />
           <Route
-            exact path={paths.apiRestData1m}
+            exact
+            path={paths.apiRestData20k}
+            render={(props) => <DynamicTable {...props} amount={'data20k'} />}
+          />
+          <Route
+            exact
+            path={paths.apiRestData50k}
+            render={(props) => <DynamicTable {...props} amount={'data50k'} />}
+          />
+          <Route
+            exact
+            path={paths.apiRestData1m}
             render={(props) => <DynamicTable {...props} amount={'data1m'} />}
+          />
+          <Route
+            exact
+            path={paths.apiRestData3m}
+            render={(props) => <DynamicTable {...props} amount={'data3m'} />}
+          />
+          <Route
+            exact
+            path={paths.apiRestData5m}
+            render={(props) => <DynamicTable {...props} amount={'data5m'} />}
+          />
+          <Route
+            exact
+            path={paths.apiRestData10m}
+            render={(props) => <DynamicTable {...props} amount={'data10m'} />}
           />
         </Switch>
       </Router>

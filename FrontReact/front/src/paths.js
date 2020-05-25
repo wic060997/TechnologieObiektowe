@@ -6,6 +6,13 @@ export const paths = {
   dynamicTable: '/dynamic-table',
   apiRestSimple: '/dynamic-table/simple',
   apiRestData1k: '/dynamic-table/data1k',
+  apiRestData3k: '/dynamic-table/data3k',
+  apiRestData5k: '/dynamic-table/data5k',
   apiRestData10k:'/dynamic-table/data10k',
-  apiRestData1m:'/dynamic-table/data1m'
+  apiRestData20k:'/dynamic-table/data20k',
+  apiRestData50k:'/dynamic-table/data50k',
+  apiRestData1m:'/dynamic-table/data1m',
+  apiRestData3m:'/dynamic-table/data3m',
+  apiRestData5m:'/dynamic-table/data5m',
+  apiRestData10m:'/dynamic-table/data10m',
 };
