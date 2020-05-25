@@ -50,3 +50,11 @@ p {
   transform: translate(-50%, -50%);
   word-wrap: break-word;
 }
+.element-user {
+  width: 20%;
+  margin: 0 auto;
+  border: 1px black solid;
+}
+.element-user p {
+  color: black !important;
+}

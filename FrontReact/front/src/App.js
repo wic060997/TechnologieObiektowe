@@ -7,6 +7,7 @@ import { paths } from './paths.js';
 import StaticTable from './Components/StaticTable';
 import DynamicTable from './Components/DynamicTable';
 import Rest from './Components/Rest';
+import CrudComponent from './Components/CrudComponent';
 class App extends Component {
   render() {
     return (
@@ -16,6 +17,7 @@ class App extends Component {
           <Route path={paths.homeText} component={Text} />
           <Route path={paths.homeTable} component={Table} />
           <Route path={paths.staticTable} component={StaticTable} />
+          <Route path={paths.CRUD} component={CrudComponent} />
           <Route exact path={paths.dynamicTable} component={Rest} />
           <Route
             exact
