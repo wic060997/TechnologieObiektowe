@@ -23,7 +23,7 @@ const divs = [
     class: 'div-table',
     name: '3k Danych',
     link: '/dynamic-table/data3k',
-    id_div: 'wrap-container-table-dynamic-id-2',
+    id_div: 'wrap-container-table-dynamic-id-3',
     param: 'data3k'
   },
   {
@@ -31,7 +31,7 @@ const divs = [
     class: 'div-table',
     name: '5k Danych',
     link: '/dynamic-table/data5k',
-    id_div: 'wrap-container-table-dynamic-id-2',
+    id_div: 'wrap-container-table-dynamic-id-4',
     param: 'data5k'
   },
   {
@@ -39,7 +39,7 @@ const divs = [
     class: 'div-table',
     name: '10k Danych',
     link: '/dynamic-table/data10k',
-    id_div: 'wrap-container-table-dynamic-id-3',
+    id_div: 'wrap-container-table-dynamic-id-5',
     param: 'data10k'
   },
   {
@@ -47,7 +47,7 @@ const divs = [
     class: 'div-table',
     name: '20k Danych',
     link: '/dynamic-table/data20k',
-    id_div: 'wrap-container-table-dynamic-id-3',
+    id_div: 'wrap-container-table-dynamic-id-6',
     param: 'data20k'
   },
   {
@@ -55,7 +55,7 @@ const divs = [
     class: 'div-table',
     name: '50k Danych',
     link: '/dynamic-table/data50k',
-    id_div: 'wrap-container-table-dynamic-id-3',
+    id_div: 'wrap-container-table-dynamic-id-7',
     param: 'data50k'
   },
   {
@@ -63,7 +63,7 @@ const divs = [
     class: 'div-table',
     name: '1M Danych',
     link: '/dynamic-table/data1m',
-    id_div: 'wrap-container-table-id-4',
+    id_div: 'wrap-container-table-id-8',
     param: 'data1m'
   },
   {
@@ -71,7 +71,7 @@ const divs = [
     class: 'div-table',
     name: '3M Danych',
     link: '/dynamic-table/data3m',
-    id_div: 'wrap-container-table-id-4',
+    id_div: 'wrap-container-table-id-9',
     param: 'data3m'
   },
   {
@@ -79,7 +79,7 @@ const divs = [
     class: 'div-table',
     name: '5M Danych',
     link: '/dynamic-table/data5m',
-    id_div: 'wrap-container-table-id-4',
+    id_div: 'wrap-container-table-id-10',
     param: 'data5m'
   },
   {
@@ -87,7 +87,7 @@ const divs = [
     class: 'div-table',
     name: '10M Danych',
     link: '/dynamic-table/data10m',
-    id_div: 'wrap-container-table-id-4',
+    id_div: 'wrap-container-table-id-11',
     param: 'data10m'
   },
 ];

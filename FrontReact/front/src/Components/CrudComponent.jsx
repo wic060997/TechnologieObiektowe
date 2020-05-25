@@ -1,16 +1,21 @@
 import React, { Component } from 'react';
 import '../App.css';
 
-
-const User = (props) => (
-  <div className='element-user'>
-    <p>
-      {props.firstName} {props.lastName}
-    </p>
-    <p>{props.age}</p>
-    {/* <button onClick={}>Usun</button> */}
-  </div>
-);
+const User = (props) => {
+  function deleteUser(id) {
+    alert(id);
+    console.log(this.state.users);
+  }
+  return (
+    <div className='element-user'>
+      <p>
+        {props.firstName} {props.lastName}
+      </p>
+      <p>{props.age}</p>
+      <input type='button' onClick={() => deleteUser(props.id)} value='Usun' />
+    </div>
+  );
+};
 
 class CrudComponent extends Component {
   state = {
@@ -23,6 +28,7 @@ class CrudComponent extends Component {
         firstName={item.firstName}
         lastName={item.lastName}
         age={item.age}
+        id={item.id}
       ></User>
     ));
     return (
