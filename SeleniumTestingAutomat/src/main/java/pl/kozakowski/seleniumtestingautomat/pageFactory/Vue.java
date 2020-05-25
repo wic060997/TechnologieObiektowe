@@ -11,9 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import pl.kozakowski.seleniumtestingautomat.Configuration;
 import pl.kozakowski.seleniumtestingautomat.PageFactory;
 
-import java.util.Date;
-
-public class Vue implements PageFactory {
+public class Vue extends PageFactory {
 
     private static final String BASE_URL = "http://localhost:8081";
 
@@ -21,27 +19,47 @@ public class Vue implements PageFactory {
     private static final String DYNAMIC_DATA = "/dynamic-table";
     private static final String TEXT_DATA = "/text";
     private static final String STATIC_TABLE_ENTRY_BTN_XPATH = "/html/body/div/div/div/a[1]";
-
-    private static final Configuration.TECHNOLOGY technology = Configuration.TECHNOLOGY.VUE;
-    private WebDriver webDriver;
-    private WebDriverWait wait;
+    private static final String STATIC_DATA_ENTRY_BTN_XPATH = "/html/body/div/div/div/a[1]";
 
     public Vue(WebDriver webDriver) {
+        technology = Configuration.TECHNOLOGY.VUE;
         this.webDriver = webDriver;
         wait = new WebDriverWait(this.webDriver, 30);
     }
 
     @Override
     public Integer performStaticDataTest() {
-        return null;
+        Integer measuredDelay = 0;
+
+        webDriver.get(BASE_URL);
+        WebElement staticDataBtn = webDriver.findElement(By.xpath(STATIC_DATA_ENTRY_BTN_XPATH));
+        staticDataBtn.click();
+        do {
+            try {
+                Thread.sleep(50);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            measuredDelay = analyzeLog();
+        } while (measuredDelay == 0);
+        return measuredDelay;
     }
 
     @Override
     public Integer performStaticTableTest() {
+        Integer measuredDelay = 0;
         webDriver.get(BASE_URL+TABLE_DATA);
         WebElement staticTableBtn = webDriver.findElement(By.xpath(STATIC_TABLE_ENTRY_BTN_XPATH));
         staticTableBtn.click();
-        return analyzeLog();
+        do {
+            try {
+                Thread.sleep(50);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            measuredDelay = analyzeLog();
+        } while (measuredDelay == 0);
+        return measuredDelay;
     }
 
     @Override
@@ -53,33 +71,4 @@ public class Vue implements PageFactory {
     public Integer performDynamicTableTest(Configuration.AMOUNT_DATA amount_data) {
         return null;
     }
-
-    @Override
-    public Configuration.TECHNOLOGY getTechnology() {
-        return technology;
-    }
-
-    public Integer analyzeLog() {
-        Long startTime = 0L;
-        Long stopTime = 0L;
-        String temp;
-        LogEntries logEntries = webDriver.manage().logs().get(LogType.BROWSER);
-        for (LogEntry entry : logEntries) {
-            if(entry.getMessage().contains("Start:")) {
-                temp = entry.getMessage();
-                temp = String.valueOf(temp.subSequence(temp.indexOf("Start:") + "Start:".length(), temp.length()));
-                temp = temp.replace("\"","");
-                startTime = Long.parseLong(temp);
-            }
-            if(entry.getMessage().contains("Stop:")) {
-                temp = entry.getMessage();
-                temp = String.valueOf(temp.subSequence(temp.indexOf("Stop:") + "Stop:".length(), temp.length()));
-                temp = temp.replace("\"","");
-                stopTime = Long.parseLong(temp);
-            }
-        }
-        return Math.toIntExact(stopTime - startTime);
-    }
-
-
 }
