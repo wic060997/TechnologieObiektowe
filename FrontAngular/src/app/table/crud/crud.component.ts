@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterContentChecked } from '@angular/core';
 import {  User } from 'src/app/shared/models/user.model';
 import { Router } from '@angular/router';
 
@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   templateUrl: './crud.component.html',
   styleUrls: ['./crud.component.scss'],
 })
-export class CrudComponent implements OnInit {
+export class CrudComponent implements OnInit,AfterContentChecked {
   public list: User[]= [];
   protected newUser: User;
   protected index;
@@ -16,10 +16,15 @@ export class CrudComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    
+    console.warn("Init start: "+new Date().getTime())
+  }
+
+  ngAfterContentChecked(): void {
+    console.warn('After content checked: ' + new Date().getTime());
   }
 
   public add($event,name: string,surname: string){
+    console.warn('add or edit time: ' + new Date().getTime());
     event.stopPropagation();
     event.preventDefault();
     this.newUser = new User;
@@ -36,6 +41,7 @@ export class CrudComponent implements OnInit {
   }
 
   public remove(index: number){
+    console.warn('remove time: ' + new Date().getTime());
     this.list.splice(index,1);
   }
 

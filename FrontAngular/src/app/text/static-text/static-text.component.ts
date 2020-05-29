@@ -20,9 +20,9 @@ export class StaticTextComponent implements OnInit,AfterContentChecked {
   }
 
   ngOnInit(): void {
+    console.warn('START TIME: ' +new Date().getTime());
     this.http.get(this.jsonURL).subscribe((data) => {
       this.staticText = data[0].Text;
-      console.warn('START TIME: ' +new Date().getTime());
     });
   }
 
