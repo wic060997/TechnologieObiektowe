@@ -17,7 +17,7 @@ public final class Configuration {
 
     public enum BROWSER {
         CHROME("Google Chrome","chromedriver", "org.openqa.selenium.chrome.ChromeDriver"),
-        FIREFOX("Mozilla Firefox", "firefoxdriver", "org.openqa.selenium.firefox.FirefoxDriver"),
+//        FIREFOX("Mozilla Firefox", "firefoxdriver", "org.openqa.selenium.firefox.FirefoxDriver"),
         IE("Internt Explorer", "iedriver", "org.openqa.selenium.ie.InternetExplorerDriver"),
         OPERA("Opera", "operadriver", "org.openqa.selenium.opera.OperaDriver"),
         EDGE("Edge", "edgedriver", "org.openqa.selenium.edge.EdgeDriver");
@@ -47,10 +47,14 @@ public final class Configuration {
     }
 
     public enum TEST_TYPE {
-        STATIC_DATA("Dane statyczne"),
-        DYNAMIC_DATA("Dane dynamiczne"),
+        STATIC_DATA("Tekst statyczny"),
+//        DYNAMIC_DATA("Dane dynamiczne"),
         STATIC_TABLE("Tabela statyczna"),
-        DYNAMIC_DATE("Tabela dynamiczna");
+//        DYNAMIC_TABLE("Tabela dynamiczna"),
+        DYNAMIC_TABLE_1("Tabela dynamiczna 1 dana"),
+        DYNAMIC_TABLE_1k("Tabela dynamiczna 1k danych"),
+        DYNAMIC_TABLE_10k("Tabela dynamiczna 10k danych"),
+        DYNAMIC_TABLE_1m("Tabela dynamiczna 1m danych");
 
         public final String label;
 

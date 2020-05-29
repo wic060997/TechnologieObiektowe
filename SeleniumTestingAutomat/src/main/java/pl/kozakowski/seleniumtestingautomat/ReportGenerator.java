@@ -6,16 +6,17 @@ import java.util.TreeMap;
 
 public class ReportGenerator {
 
-    private Map<Configuration.TECHNOLOGY, Map<Configuration.BROWSER, Map<Configuration.TEST_TYPE, ArrayList<Integer>>>> report = new TreeMap<>();
+    private Map<Configuration.TECHNOLOGY, Map<Configuration.BROWSER, Map<Configuration.TEST_TYPE, ArrayList<Long>>>> report = new TreeMap<>();
 
-    public void addTestResult(Configuration.TEST_TYPE testType, Configuration.TECHNOLOGY technology, Configuration.BROWSER browser, Integer result) {
-        if (result != null) {
+    public void addTestResult(Configuration.TEST_TYPE testType, Configuration.TECHNOLOGY technology, Configuration.BROWSER browser, Long result) {
+//        if (result == null && result == 0) {
+        if (result == 0) {
+            System.out.println("Wynik pusty " + System.nanoTime() + " czas!");
+        } else {
             report.putIfAbsent(technology, new TreeMap<>());
             report.get(technology).putIfAbsent(browser, new TreeMap<>());
             report.get(technology).get(browser).putIfAbsent(testType, new ArrayList<>());
             report.get(technology).get(browser).get(testType).add(result);
-        } else {
-            System.out.println("Wynik pusty");
         }
     }
 
@@ -32,13 +33,13 @@ public class ReportGenerator {
     
     public void printReport() {
         Integer amountOfTests = 0;
-        Integer sumOfResults = 0;
+        Long sumOfResults = 0L;
         for (Configuration.TECHNOLOGY technology : report.keySet()) {
             for (Configuration.BROWSER browser : report.get(technology).keySet()) {
                 for (Configuration.TEST_TYPE testType : report.get(technology).get(browser).keySet()) {
                     amountOfTests = 0;
-                    sumOfResults = 0;
-                    for (Integer result : report.get(technology).get(browser).get(testType)) {
+                    sumOfResults = 0L;
+                    for (Long result : report.get(technology).get(browser).get(testType)) {
                         amountOfTests++;
                         sumOfResults+=result;
                     }

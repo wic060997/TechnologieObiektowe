@@ -23,9 +23,15 @@
 export default {
   methods: {
     startTime() {
-      console.log(`Start:${Date.now()}`);
+      console.warn(`Start:${Date.now()}`);
     },
   },
   name: 'DynamicTable',
 };
 </script>
+
+<style lang="scss">
+  .selector {
+    display: flex;
+  }
+</style>

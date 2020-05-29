@@ -61,17 +61,16 @@ public class TestsExecutor {
                     break;
                 }
 
-//                for (int i = 0; i < Configuration.AMOUNT_OF_TESTS; i++) {
-//                    executeTestSimpleTech(pageFactory, browser);
-//                }
-
                 for (Configuration.TEST_TYPE testType: Configuration.TEST_TYPE.values()) {
+                    System.out.println(testType);
                     for (int i = 0; i < Configuration.AMOUNT_OF_TESTS ; i++) {
                         switch (testType) {
-                            case STATIC_DATA: reportGenerator.addTestResult(testType, pageFactory.getTechnology(), browser, pageFactory.performStaticDataTest()); Thread.sleep(100); break;
-                            case STATIC_TABLE: reportGenerator.addTestResult(testType, pageFactory.getTechnology(), browser, pageFactory.performStaticTableTest()); Thread.sleep(100); break;
-                            case DYNAMIC_DATA: break;
-                            case DYNAMIC_DATE: break;
+                            case STATIC_DATA: reportGenerator.addTestResult(testType, pageFactory.getTechnology(), browser, pageFactory.performStaticDataTest()); break;//Thread.sleep(2000); break;
+                            case STATIC_TABLE: reportGenerator.addTestResult(testType, pageFactory.getTechnology(), browser, pageFactory.performStaticTableTest()); break;//Thread.sleep(2000); break;
+                            case DYNAMIC_TABLE_1: reportGenerator.addTestResult(testType, pageFactory.getTechnology(), browser, pageFactory.performDynamicTableTest(Configuration.AMOUNT_DATA._1DATA)); break;
+                            case DYNAMIC_TABLE_1k: reportGenerator.addTestResult(testType, pageFactory.getTechnology(), browser, pageFactory.performDynamicTableTest(Configuration.AMOUNT_DATA._1kDATA)); break;
+                            case DYNAMIC_TABLE_10k: reportGenerator.addTestResult(testType, pageFactory.getTechnology(), browser, pageFactory.performDynamicTableTest(Configuration.AMOUNT_DATA._10kDATA)); break;
+                            case DYNAMIC_TABLE_1m: reportGenerator.addTestResult(testType, pageFactory.getTechnology(), browser, pageFactory.performDynamicTableTest(Configuration.AMOUNT_DATA._1MDATA)); break;
                         }
                     }
                 }
@@ -79,11 +78,4 @@ public class TestsExecutor {
             }
         }
     }
-
-//    private void executeTestSimpleTech(PageFactory pageFactory, Configuration.BROWSER browser) {
-////        reportGenerator.addTestResult(pageFactory.getTechnology(), browser, Configuration.TEST_TYPE.STATIC_TABLE, pageFactory.performStaticTableTest());
-//        reportGenerator.addTestResult(Configuration.TEST_TYPE.STATIC_TABLE, pageFactory.getTechnology(), browser, pageFactory.performStaticTableTest());
-//        reportGenerator.addTestResult(Configuration.TEST_TYPE.STATIC_DATA, pageFactory.getTechnology(), browser, pageFactory.performStaticDataTest());
-//    }
-
 }
