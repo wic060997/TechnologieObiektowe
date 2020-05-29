@@ -32,19 +32,49 @@ public class TestsController {
         return ResponseEntity.status(HttpStatus.OK).body(gson.toJson(TestData.getData1k()));
     }
     @CrossOrigin
+    @RequestMapping(method = RequestMethod.GET, path = "/data3k")
+    public ResponseEntity data3k() {
+        return ResponseEntity.status(HttpStatus.OK).body(gson.toJson(TestData.getData3k()));
+    }
+    @CrossOrigin
+    @RequestMapping(method = RequestMethod.GET, path = "/data5k")
+    public ResponseEntity data5k() {
+        return ResponseEntity.status(HttpStatus.OK).body(gson.toJson(TestData.getData5k()));
+    }
+    @CrossOrigin
     @RequestMapping(method = RequestMethod.GET, path = "/data10k")
     public ResponseEntity data10k() {
         return ResponseEntity.status(HttpStatus.OK).body(gson.toJson(TestData.getData10k()));
+    }
+    @CrossOrigin
+    @RequestMapping(method = RequestMethod.GET, path = "/data20k")
+    public ResponseEntity data20k() {
+        return ResponseEntity.status(HttpStatus.OK).body(gson.toJson(TestData.getData20k()));
+    }
+    @CrossOrigin
+    @RequestMapping(method = RequestMethod.GET, path = "/data50k")
+    public ResponseEntity data50k() {
+        return ResponseEntity.status(HttpStatus.OK).body(gson.toJson(TestData.getData50k()));
     }
     @CrossOrigin
     @RequestMapping(method = RequestMethod.GET, path = "/data1m")
     public ResponseEntity data1m() {
         return ResponseEntity.status(HttpStatus.OK).body(gson.toJson(TestData.getData1m()));
     }
-
-//    @RequestMapping(method = RequestMethod.GET, path = "/data10m")
-//    public ResponseEntity data10m() {
-//        return ResponseEntity.status(HttpStatus.OK).body(TestData.getData10m());
-//    }
+    @CrossOrigin
+    @RequestMapping(method = RequestMethod.GET, path = "/data3m")
+    public ResponseEntity data3m() {
+        return ResponseEntity.status(HttpStatus.OK).body(gson.toJson(TestData.getData3m()));
+    }
+    @CrossOrigin
+    @RequestMapping(method = RequestMethod.GET, path = "/data5m")
+    public ResponseEntity data5m() {
+        return ResponseEntity.status(HttpStatus.OK).body(gson.toJson(TestData.getData5m()));
+    }
+    @CrossOrigin
+    @RequestMapping(method = RequestMethod.GET, path = "/data10m")
+    public ResponseEntity data10m() {
+        return ResponseEntity.status(HttpStatus.OK).body(gson.toJson(TestData.getData10m()));
+    }
 
 }

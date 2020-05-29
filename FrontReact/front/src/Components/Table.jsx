@@ -15,6 +15,13 @@ const divs = [
     link: '/dynamic-table',
     id_div: 'wrap-container-table-id-2',
   },
+  {
+    id: 2,
+    class: 'div-table',
+    name: 'CRUD',
+    link: '/crud',
+    id_div: 'wrap-container-table-id-2',
+  },
 ];
 
 class Table extends Component {

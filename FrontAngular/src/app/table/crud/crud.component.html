@@ -1,0 +1,17 @@
+<div>
+  <h2>Lista użytkowników</h2>
+  <form ref="myForm">
+    <input #nazwa matInput value="" placeholder="twoje imie" />
+    <input #surname matInput value="" placeholder="twoje nazwisko" />
+    <button (click)="add($event,nazwa.value,surname.value)">Dodaj</button>
+  </form>
+  <div *ngFor="let e of list;let i = index">
+        <div>
+          <p>
+            {{e.name}}, {{e.surname}}
+          </p>
+          <button (click)="remove(i)">Usuń</button>
+          <button (click)="edit(i)">Modyfikuj</button>
+        </div>
+    </div>
+</div>

@@ -8,6 +8,7 @@
   display: flex;
   height: 80%;
   flex-direction: row;
+  flex-flow: row wrap;
   align-items: center;
   justify-content: center;
 }
@@ -48,4 +49,20 @@ p {
   top: 30%;
   transform: translate(-50%, -50%);
   word-wrap: break-word;
+}
+.element-user {
+  width: 20%;
+  margin: 0 auto;
+  border: 1px black solid;
+}
+.element-user p {
+  color: black !important;
+}
+.div-user {
+  width: 350px;
+  border: 1px solid black;
+  margin: 0 auto;
+}
+.div-user p {
+  color: black !important;
 }

@@ -16,6 +16,7 @@ const divs = [
     link: '/table',
     id_div: 'wrap-container-id-2',
   },
+  
 ];
 
 class HomePage extends Component {
