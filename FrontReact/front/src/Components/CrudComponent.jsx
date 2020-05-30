@@ -3,6 +3,7 @@ import '../App.css';
 
 class CrudComponent extends Component {
   constructor(props) {
+    console.log('Start: ' + Date.now())
     super(props);
     this.state = {
       act: 0,
@@ -11,10 +12,17 @@ class CrudComponent extends Component {
     };
   }
 
+  static getDerivedStateFromProps(){
+    console.log('Start Update: ' + Date.now())
+  }
   componentDidMount() {
     this.refs.name.focus();
+    console.log('Finish: ' + Date.now())
   }
 
+  componentDidUpdate(){
+    console.log('Finish Update: ' + Date.now())
+  }
   addData = (e) => {
     e.preventDefault();
     let users = this.state.users;
