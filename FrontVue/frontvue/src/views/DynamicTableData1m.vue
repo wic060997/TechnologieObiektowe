@@ -6,6 +6,9 @@
 
 <script>
 export default {
+  mounted() {
+    console.warn(`Stop:${Date.now()}`);
+  },
   name: 'DynamicTableSimple',
 };
 </script>
