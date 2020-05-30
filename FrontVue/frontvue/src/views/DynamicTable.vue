@@ -3,16 +3,16 @@
       <p v-on:click="startTime()">Lorem gipsum Dynamic Table</p>
 
       <div class='selector'>
-            <router-link to='/dynamic-table/simple' v-on:click.native='startTime()'>
+            <router-link to='/dynamic-table/simple' ><!--v-on:click.native='startTime()'>-->
               1 Dana
             </router-link>
-            <router-link to='/dynamic-table/data1k' v-on:click.native='startTime()'>
+            <router-link to='/dynamic-table/data1k' ><!--v-on:click.native='startTime()'>-->
               1k Danych
             </router-link>
-            <router-link to='/dynamic-table/data10k' v-on:click.native='startTime()'>
+            <router-link to='/dynamic-table/data10k' ><!-- v-on:click.native='startTime()'>-->
               10k Danych
             </router-link>
-            <router-link to='/dynamic-table/data1m' v-on:click.native='startTime()'>
+            <router-link to='/dynamic-table/data1m' ><!--v-on:click.native='startTime()'>-->
               1m Danych
             </router-link>
         </div>
@@ -23,9 +23,18 @@
 export default {
   methods: {
     startTime() {
-      console.log(`Start:${Date.now()}`);
+      console.warn(`Start:${Date.now()}`);
     },
+  },
+  destroyed() {
+    console.warn(`Start:${Date.now()}`);
   },
   name: 'DynamicTable',
 };
 </script>
+
+<style lang="scss">
+  .selector {
+    display: flex;
+  }
+</style>

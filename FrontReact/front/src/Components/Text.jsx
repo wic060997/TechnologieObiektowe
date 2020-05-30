@@ -6,11 +6,11 @@ class Text extends Component {
   constructor()
   {
     super()
-    console.log('Start: ' + Date.now());
+    console.warn('Start: ' + Date.now());
   }
 
   componentDidMount(){
-    console.log('Finish: ' + Date.now())
+    console.warn('Finish: ' + Date.now())
   }
   render() {
    

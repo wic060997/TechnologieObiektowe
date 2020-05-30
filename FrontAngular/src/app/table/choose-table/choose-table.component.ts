@@ -20,11 +20,32 @@ export class ChooseTableComponent implements OnInit {
     if(nu == 1000){
       this.router.navigate(["OneThousandElement"]);
     }
+    if(nu == 3000){
+      this.router.navigate(["ThreeKDataComponent"]);
+    }
+    if(nu == 5000){
+      this.router.navigate(["FiveKDataComponent"]);
+    }
     if(nu == 10000){
       this.router.navigate(["TenThousandElement"]);
     }
+    if(nu == 20000){
+      this.router.navigate(["TwentyKDataComponent"]);
+    }
+    if(nu == 50000){
+      this.router.navigate(["FiftyKDataComponent"]);
+    }
     if(nu == 1000000){
       this.router.navigate(["MilionElement"]);
+    }
+    if(nu == 3000000){
+      this.router.navigate(["ThreeMDataComponent"]);
+    }
+    if(nu == 5000000){
+      this.router.navigate(["FiveMDataComponent"]);
+    }
+    if(nu == 10000000){
+      this.router.navigate(["TenMDataComponent"]);
     }
   }
 }

@@ -21,9 +21,7 @@ export default {
     };
   },
   created() {
-    // this.plik = pliczek;
     this.plik = pliczek.Text;
-    // pliczek.map((item, i) => <div key={i}>{item.Text} </div>);
   },
 };
 </script>

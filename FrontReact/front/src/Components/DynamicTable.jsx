@@ -4,7 +4,7 @@ import '../App.css';
 class DynamicTable extends Component {
   constructor()
   {
-    console.log('Start: ' + Date.now())
+    console.warn('Start: ' + Date.now())
     super()
     this.state = {
       data: '',
@@ -12,7 +12,7 @@ class DynamicTable extends Component {
 
   }
   componentDidUpdate(){
-    console.log('Finish: ' + Date.now())
+    console.warn('Finish: ' + Date.now())
   }
 
   componentDidMount() { 

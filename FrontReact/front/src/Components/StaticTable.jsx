@@ -5,13 +5,13 @@ import data from './data/jsonDataTable.json';
 class StaticTable extends Component {
   constructor()
   {
-    console.log('Start: ' + Date.now());
+    console.warn('Start: ' + Date.now());
     super()
     this.state = {};
   }
 
   componentDidMount(){
-    console.log('Finish: ' + Date.now())
+    console.warn('Finish: ' + Date.now())
   }
  
 

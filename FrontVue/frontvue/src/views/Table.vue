@@ -17,5 +17,8 @@ export default {
       console.warn(`Start:${Date.now()}`);
     },
   },
+  destroyed() {
+    console.warn(`Start:${Date.now()}`);
+  },
 };
 </script>
