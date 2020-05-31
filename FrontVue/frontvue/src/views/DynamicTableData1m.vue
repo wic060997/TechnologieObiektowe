@@ -9,6 +9,6 @@ export default {
   mounted() {
     console.warn(`Stop:${Date.now()}`);
   },
-  name: 'DynamicTableSimple',
+  name: 'DynamicTable1m',
 };
 </script>
