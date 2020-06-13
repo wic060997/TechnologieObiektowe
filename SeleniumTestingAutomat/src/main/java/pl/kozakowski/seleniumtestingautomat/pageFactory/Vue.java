@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import pl.kozakowski.seleniumtestingautomat.Configuration;
 import pl.kozakowski.seleniumtestingautomat.PageFactory;
-
+/*
 public class Vue extends PageFactory {
 
     private static final String BASE_URL = "http://localhost:8081";
@@ -82,4 +82,4 @@ public class Vue extends PageFactory {
         } while (measuredDelay < 0);
         return measuredDelay;
     }
-}
+}*/

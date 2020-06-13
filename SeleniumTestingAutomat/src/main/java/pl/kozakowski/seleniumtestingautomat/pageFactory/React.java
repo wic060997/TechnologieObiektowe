@@ -72,8 +72,15 @@ public class React extends PageFactory {
         switch (amount_data) {
             case _1DATA: dynamicTableBtn = webDriver.findElement(By.xpath("//*[@id=\"wrap-container-main-table\"]/a[1]")); break;
             case _1kDATA: dynamicTableBtn = webDriver.findElement(By.xpath("//*[@id=\"wrap-container-main-table\"]/a[2]")); break;
-            case _10kDATA: dynamicTableBtn = webDriver.findElement(By.xpath("//*[@id=\"wrap-container-main-table\"]/a[3]")); break;
-            case _1MDATA: dynamicTableBtn = webDriver.findElement(By.xpath("//*[@id=\"wrap-container-main-table\"]/a[4]")); break;
+            case _3kDATA:dynamicTableBtn = webDriver.findElement(By.xpath("//*[@id=\"wrap-container-main-table\"]/a[3]")); break;
+            case _5kDATA:dynamicTableBtn = webDriver.findElement(By.xpath("//*[@id=\"wrap-container-main-table\"]/a[4]")); break;
+            case _10kDATA: dynamicTableBtn = webDriver.findElement(By.xpath("//*[@id=\"wrap-container-main-table\"]/a[5]")); break;
+            case _20kDATA:dynamicTableBtn = webDriver.findElement(By.xpath("//*[@id=\"wrap-container-main-table\"]/a[6]")); break;
+            case _50kDATA:dynamicTableBtn = webDriver.findElement(By.xpath("//*[@id=\"wrap-container-main-table\"]/a[7]")); break;
+            case _1MDATA: dynamicTableBtn = webDriver.findElement(By.xpath("//*[@id=\"wrap-container-main-table\"]/a[8]")); break;
+            case _3MDATA:dynamicTableBtn = webDriver.findElement(By.xpath("//*[@id=\"wrap-container-main-table\"]/a[9]")); break;
+            case _5MDATA:dynamicTableBtn = webDriver.findElement(By.xpath("//*[@id=\"wrap-container-main-table\"]/a[10]")); break;
+            case _10MDATA:dynamicTableBtn = webDriver.findElement(By.xpath("//*[@id=\"wrap-container-main-table\"]/a[11]")); break;
         }
         dynamicTableBtn.click();
         do {

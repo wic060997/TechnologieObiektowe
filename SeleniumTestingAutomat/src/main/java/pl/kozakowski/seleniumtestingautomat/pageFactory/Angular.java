@@ -72,8 +72,15 @@ public class Angular extends PageFactory {
         switch (amount_data) {
             case _1DATA: dynamicTableBtn = webDriver.findElement(By.xpath("/html/body/app-root/app-choose-table/div/div/button[1]")); break;
             case _1kDATA: dynamicTableBtn = webDriver.findElement(By.xpath("/html/body/app-root/app-choose-table/div/div/button[2]")); break;
+            case _3kDATA: dynamicTableBtn = webDriver.findElement(By.xpath("/html/body/app-root/app-choose-table/div/div/button[3]")); break;
+            case _5kDATA: dynamicTableBtn = webDriver.findElement(By.xpath("/html/body/app-root/app-choose-table/div/div/button[4]")); break;
             case _10kDATA: dynamicTableBtn = webDriver.findElement(By.xpath("/html/body/app-root/app-choose-table/div/div/button[5]")); break;
+            case _20kDATA: dynamicTableBtn = webDriver.findElement(By.xpath("/html/body/app-root/app-choose-table/div/div/button[6]")); break;
+            case _50kDATA: dynamicTableBtn = webDriver.findElement(By.xpath("/html/body/app-root/app-choose-table/div/div/button[7]")); break;
             case _1MDATA: dynamicTableBtn = webDriver.findElement(By.xpath("/html/body/app-root/app-choose-table/div/div/button[8]")); break;
+            case _3MDATA:dynamicTableBtn = webDriver.findElement(By.xpath("/html/body/app-root/app-choose-table/div/div/button[9]")); break;
+            case _5MDATA:dynamicTableBtn = webDriver.findElement(By.xpath("/html/body/app-root/app-choose-table/div/div/button[10]")); break;
+            case _10MDATA:dynamicTableBtn = webDriver.findElement(By.xpath("/html/body/app-root/app-choose-table/div/div/button[11]")); break;
         }
         dynamicTableBtn.click();
         do {

@@ -4,8 +4,9 @@ public final class Configuration {
 
     public enum TECHNOLOGY {
         REACT("ReactJS"),
-        ANGULAR("ANgularJS"),
-        VUE("VueJS");
+        ANGULAR("AngularTS"),
+        VUE("VueJS")
+        ;
 
         public final String label;
 
@@ -36,8 +37,15 @@ public final class Configuration {
     public enum AMOUNT_DATA {
         _1DATA("1 data"),
         _1kDATA("1k data"),
+        _3kDATA("3k data"),
+        _5kDATA("5k data"),
         _10kDATA("10k data"),
-        _1MDATA("1M data");
+        _20kDATA("20k data"),
+        _50kDATA("50k data"),
+        _1MDATA("1M data"),
+        _3MDATA("3M data"),
+        _5MDATA("5M data"),
+        _10MDATA("10M data");
 
         public final String label;
 
@@ -53,8 +61,15 @@ public final class Configuration {
 //        DYNAMIC_TABLE("Tabela dynamiczna"),
         DYNAMIC_TABLE_1("Tabela dynamiczna 1 dana"),
         DYNAMIC_TABLE_1k("Tabela dynamiczna 1k danych"),
+        DYNAMIC_TABLE_3k("Tabela dynamiczna 3k danych"),
+        DYNAMIC_TABLE_5k("Tabela dynamiczna 5k danych"),
         DYNAMIC_TABLE_10k("Tabela dynamiczna 10k danych"),
-        DYNAMIC_TABLE_1m("Tabela dynamiczna 1m danych");
+        DYNAMIC_TABLE_20k("Tabela dynamiczna 20k danych"),
+        DYNAMIC_TABLE_50k("Tabela dynamiczna 50k danych"),
+        DYNAMIC_TABLE_1m("Tabela dynamiczna 1m danych"),
+        DYNAMIC_TABLE_3m("Tabela dynamiczna 3m danych"),
+        DYNAMIC_TABLE_5m("Tabela dynamiczna 5m danych"),
+        DYNAMIC_TABLE_10m("Tabela dynamiczna 10m danych");
 
         public final String label;
 

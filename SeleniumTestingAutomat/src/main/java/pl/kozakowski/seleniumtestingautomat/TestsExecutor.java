@@ -70,8 +70,15 @@ public class TestsExecutor {
                             case STATIC_TABLE: reportGenerator.addTestResult(testType, pageFactory.getTechnology(), browser, pageFactory.performStaticTableTest()); break;//Thread.sleep(2000); break;
                             case DYNAMIC_TABLE_1: reportGenerator.addTestResult(testType, pageFactory.getTechnology(), browser, pageFactory.performDynamicTableTest(Configuration.AMOUNT_DATA._1DATA)); break;
                             case DYNAMIC_TABLE_1k: reportGenerator.addTestResult(testType, pageFactory.getTechnology(), browser, pageFactory.performDynamicTableTest(Configuration.AMOUNT_DATA._1kDATA)); break;
+                            case DYNAMIC_TABLE_3k:reportGenerator.addTestResult(testType, pageFactory.getTechnology(), browser, pageFactory.performDynamicTableTest(Configuration.AMOUNT_DATA._3kDATA)); break;
+                            case DYNAMIC_TABLE_5k:reportGenerator.addTestResult(testType, pageFactory.getTechnology(), browser, pageFactory.performDynamicTableTest(Configuration.AMOUNT_DATA._5kDATA)); break;
                             case DYNAMIC_TABLE_10k: reportGenerator.addTestResult(testType, pageFactory.getTechnology(), browser, pageFactory.performDynamicTableTest(Configuration.AMOUNT_DATA._10kDATA)); break;
+                            case DYNAMIC_TABLE_20k:reportGenerator.addTestResult(testType, pageFactory.getTechnology(), browser, pageFactory.performDynamicTableTest(Configuration.AMOUNT_DATA._20kDATA)); break;
+                            case DYNAMIC_TABLE_50k:reportGenerator.addTestResult(testType, pageFactory.getTechnology(), browser, pageFactory.performDynamicTableTest(Configuration.AMOUNT_DATA._50kDATA)); break;
                             case DYNAMIC_TABLE_1m: reportGenerator.addTestResult(testType, pageFactory.getTechnology(), browser, pageFactory.performDynamicTableTest(Configuration.AMOUNT_DATA._1MDATA)); break;
+                            case DYNAMIC_TABLE_3m:reportGenerator.addTestResult(testType, pageFactory.getTechnology(), browser, pageFactory.performDynamicTableTest(Configuration.AMOUNT_DATA._3MDATA)); break;
+                            case DYNAMIC_TABLE_5m:reportGenerator.addTestResult(testType, pageFactory.getTechnology(), browser, pageFactory.performDynamicTableTest(Configuration.AMOUNT_DATA._5MDATA)); break;
+                            case DYNAMIC_TABLE_10m:reportGenerator.addTestResult(testType, pageFactory.getTechnology(), browser, pageFactory.performDynamicTableTest(Configuration.AMOUNT_DATA._10MDATA)); break;
                         }
                     }
                 }
