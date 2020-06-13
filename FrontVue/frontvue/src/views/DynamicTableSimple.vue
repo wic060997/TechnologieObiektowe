@@ -1,14 +1,34 @@
 <template>
     <div class="dynamic-table">
-      <p>Lorem gipsum Dynamic Table Simple</p>
+      <div id="text_area">
+        {{data}}
+      </div>
     </div>
 </template>
 
 <script>
 export default {
-  mounted() {
+  data() {
+    return {
+      data: {},
+    };
+  },
+
+  beforeMount() {
+    this.getText();
+  },
+
+  updated() {
     console.warn(`Stop:${Date.now()}`);
   },
+  methods: {
+    async getText() {
+      const res = await fetch('http://localhost:8080/simple');
+      const data = await res.json();
+      this.data = data;
+    },
+  },
+
   name: 'DynamicTableSimple',
 };
 </script>
