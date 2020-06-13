@@ -17,9 +17,9 @@ export class StaticTableComponent implements OnInit,AfterContentChecked {
   }
 
   ngOnInit(): void {
+    console.warn('START TIME: ' +new Date().getTime());
     this.http.get(this.jsonURL).subscribe(result => {
       this.data = result;
-      console.warn('START TIME: ' +new Date().getTime());
     });
   }
 }
