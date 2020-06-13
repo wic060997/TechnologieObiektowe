@@ -3,17 +3,15 @@ import '../App.css';
 import data from './data/jsonDataTable.json';
 
 class StaticTable extends Component {
-  constructor()
-  {
+  constructor() {
     console.warn('Start: ' + Date.now());
-    super()
+    super();
     this.state = {};
   }
 
-  componentDidMount(){
-    console.warn('Finish: ' + Date.now())
+  componentDidMount() {
+    console.warn('Finish: ' + Date.now());
   }
- 
 
   render() {
     const elementRender = data.map((item, i) => (
@@ -30,14 +28,16 @@ class StaticTable extends Component {
       <div className='static-table-div'>
         <table>
           <thead>
-            <th>Id</th>
-            <th>Imie</th>
-            <th>Nazwisko</th>
-            <th>email</th>
-            <th>gender</th>
-            <th>ip_address</th>
+            <tr>
+              <th>Id</th>
+              <th>Imie</th>
+              <th>Nazwisko</th>
+              <th>email</th>
+              <th>gender</th>
+              <th>ip_address</th>
+            </tr>
           </thead>
-          {elementRender}
+          <tbody>{elementRender}</tbody>
         </table>
       </div>
     );
