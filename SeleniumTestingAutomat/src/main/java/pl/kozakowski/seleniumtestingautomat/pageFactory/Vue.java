@@ -1,6 +1,6 @@
 package pl.kozakowski.seleniumtestingautomat.pageFactory;
 
-/*import org.openqa.selenium.By;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -82,4 +82,4 @@ public class Vue extends PageFactory {
         } while (measuredDelay < 0);
         return measuredDelay;
     }
-}*/
+}

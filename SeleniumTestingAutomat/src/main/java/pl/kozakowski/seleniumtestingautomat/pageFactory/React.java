@@ -48,15 +48,6 @@ public class React extends PageFactory {
     @Override
     public Long performStaticTableTest() {
 
-//        Long startTime;
-//        Long stopTime;
-        // przejdź do /table
-        // kliknij "Dane w tabeli statyczne"
-        // Zacznij liczyć
-        // Wyszukaj widoczne "rverekerrr@about.com"
-        // Zegar stop
-        // Zwróć różnice
-
         Long measuredDelay = 0L;
 
         webDriver.get(BASE_URL+TABLE_DATA);
@@ -72,11 +63,6 @@ public class React extends PageFactory {
         } while (measuredDelay < 0);
         return measuredDelay;
     }
-
-//    @Override
-//    public Long performDynamicDataTest() {
-//
-    //}
 
     @Override
     public Long performDynamicTableTest(Configuration.AMOUNT_DATA amount_data) {

@@ -35,6 +35,7 @@ public class TestsExecutor {
 
         System.out.println("Lista technologi do testów: " + classes);
         for (Class<? extends PageFactory> pageFactoryClass : classes) {
+            System.out.println(pageFactoryClass.getCanonicalName());
             for (Configuration.BROWSER browser : browsers) {
                 // create WebDriver instance
                 // execute simple test
