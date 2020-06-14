@@ -5,6 +5,7 @@ import org.openqa.selenium.logging.LogEntries;
 import org.openqa.selenium.logging.LogEntry;
 import org.openqa.selenium.logging.LogType;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import pl.kozakowski.seleniumtestingautomat.model.ResultCrud;
 
 public abstract class PageFactory {
 
@@ -14,6 +15,7 @@ public abstract class PageFactory {
 
     public abstract Long performStaticDataTest();
     public abstract Long performStaticTableTest();
+    public abstract ResultCrud performCrudElements();
 //    public abstract Long performDynamicDataTest();
     public abstract Long performDynamicTableTest(Configuration.AMOUNT_DATA amount_data);
 

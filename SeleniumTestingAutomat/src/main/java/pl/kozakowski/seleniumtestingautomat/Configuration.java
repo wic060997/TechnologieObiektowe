@@ -69,7 +69,12 @@ public final class Configuration {
         DYNAMIC_TABLE_1m("Tabela dynamiczna 1m danych"),
         DYNAMIC_TABLE_3m("Tabela dynamiczna 3m danych"),
         DYNAMIC_TABLE_5m("Tabela dynamiczna 5m danych"),
-        DYNAMIC_TABLE_10m("Tabela dynamiczna 10m danych");
+        DYNAMIC_TABLE_10m("Tabela dynamiczna 10m danych"),
+
+        CRUD_DATA("Elementy cruda"),
+        CRUD_ADD("Dodawanie elementów"),
+        CRUD_EDIT("Edytowanie elementów"),
+        CRUD_DELETE("Usuwanie elementów");
 
         public final String label;
 
@@ -78,5 +83,8 @@ public final class Configuration {
         }
     }
 
-    public static final int AMOUNT_OF_TESTS = 5;
+    public static final int AMOUNT_OF_TESTS = 1;
+    public static final int AMOUNT_ADD_CRUD = 10;
+    public static final int AMOUNT_EDIT_CRUD = 5;
+    public static final int AMOUNT_ROMOVE_CRUD = 10;
 }

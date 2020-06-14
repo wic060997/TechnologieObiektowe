@@ -3,7 +3,7 @@ import '../App.css';
 
 class CrudComponent extends Component {
   constructor(props) {
-    console.log('Start: ' + Date.now())
+    console.warn('Start: ' + Date.now())
     super(props);
     this.state = {
       act: 0,
@@ -13,15 +13,15 @@ class CrudComponent extends Component {
   }
 
   static getDerivedStateFromProps(){
-    console.log('Start Update: ' + Date.now())
+    console.warn('Start Update: ' + Date.now())
   }
   componentDidMount() {
     this.refs.name.focus();
-    console.log('Finish: ' + Date.now())
+    console.warn('Finish: ' + Date.now())
   }
 
   componentDidUpdate(){
-    console.log('Finish Update: ' + Date.now())
+    console.warn('Finish Update: ' + Date.now())
   }
   addData = (e) => {
     e.preventDefault();
@@ -34,7 +34,7 @@ class CrudComponent extends Component {
         name,
         surname: surname,
       };
-      console.log(this.state.users);
+      //console.log(this.state.users);
       users.push(data);
     } else {
       let index = this.state.index;
@@ -86,7 +86,7 @@ class CrudComponent extends Component {
           {this.state.users.map((user, i) => (
             <div key={i} className='div-user'>
               <p className=''>
-                {i + 1}.{user.name}, {user.surname}
+                {user.name}, {user.surname}
               </p>
               <button onClick={() => this.removeData(i)}>Usuń</button>
               <button onClick={() => this.editData(i)}>Modyfikuj</button>
