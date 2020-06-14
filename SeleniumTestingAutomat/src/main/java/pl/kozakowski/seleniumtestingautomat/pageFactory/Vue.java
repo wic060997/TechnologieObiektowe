@@ -40,6 +40,7 @@ public class Vue extends PageFactory {
             }
             measuredDelay = analyzeLog(START_TEXT, STOP_TEXT);
         } while (measuredDelay == 0);
+        if(!(measuredDelay < 1000*60*60*24 && measuredDelay > -1)) measuredDelay = performStaticDataTest();
         return measuredDelay;
     }
 
@@ -57,6 +58,7 @@ public class Vue extends PageFactory {
             }
             measuredDelay = analyzeLog(START_TEXT, STOP_TEXT);
         } while (measuredDelay == 0);
+        if(!(measuredDelay < 1000*60*60*24 && measuredDelay > -1)) measuredDelay = performStaticTableTest();
         return measuredDelay;
     }
 
@@ -87,6 +89,7 @@ public class Vue extends PageFactory {
             }
             measuredDelay = analyzeLog(START_TEXT, STOP_TEXT);
         } while (measuredDelay < 0);
+        if(!(measuredDelay < 1000*60*60*24 && measuredDelay > -1)) measuredDelay = performDynamicTableTest(amount_data);
         return measuredDelay;
     }
 }
