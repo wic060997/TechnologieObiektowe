@@ -36,6 +36,6 @@ export default {
   updated() {
     console.warn(`Stop:${Date.now()}`);
   },
-  name: "StaticTable",
+  name: 'StaticTable',
 };
 </script>
