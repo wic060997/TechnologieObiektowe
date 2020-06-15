@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
-/*
+
 public class Angular extends PageFactory {
 
     private static final String BASE_URL = "http://localhost:4200";
@@ -189,4 +189,3 @@ public class Angular extends PageFactory {
         return measuredDelay;
     }
 }
-*/

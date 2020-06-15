@@ -83,8 +83,8 @@ public final class Configuration {
         }
     }
 
-    public static final int AMOUNT_OF_TESTS = 1;
-    public static final int AMOUNT_ADD_CRUD = 10;
-    public static final int AMOUNT_EDIT_CRUD = 5;
-    public static final int AMOUNT_ROMOVE_CRUD = 10;
+    public static final int AMOUNT_OF_TESTS = 10;
+    public static final int AMOUNT_ADD_CRUD = 20;
+    public static final int AMOUNT_EDIT_CRUD = 10;
+    public static final int AMOUNT_ROMOVE_CRUD = 20;
 }
